@@ -9,15 +9,14 @@
 
 #include <iostream>
 #include "utilitaire_generation.h"
-
-using namespace std;
-
+#include "type_def.h"
+#include "utilitaires.h"
 
 int main(){
-    
-    string nom = genererNomPrenom("Noms_TP4.txt", 1000);
-    string prenom = genererNomPrenom("Prenoms_TP4.txt", 11612);
-    string tel = genererTel();
+    personne* p1 = genererPersonne();
+    std::string nom = genererNomPrenom("Noms_TP4.txt", 1000);
+    std::string prenom = genererNomPrenom("Prenoms_TP4.txt", 11612);
+    std::string tel = genererTel();
     cout<< nom<<" "<<prenom<<" "<<tel<<endl;
     return 0;
 }
