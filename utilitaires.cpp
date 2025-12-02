@@ -15,3 +15,8 @@ elementListe *creerElementListe(const personne &p)
   elementListe *nouv = new elementListe{p, nullptr, nullptr};
   return nouv;
 }
+
+bool egalitePersonne(const personne &p1, const personne &p2)
+{
+  return (p1.nom == p2.nom) && (p1.prenom == p2.prenom) && (p1.telephone == p2.telephone);
+}
