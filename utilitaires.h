@@ -3,3 +3,4 @@
 
 personne *genererPersonne();
 elementListe *creerElementListe(const personne &p);
+void affichagePersonne(personne *p);

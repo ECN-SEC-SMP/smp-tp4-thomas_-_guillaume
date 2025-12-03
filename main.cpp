@@ -14,6 +14,7 @@
 
 int main(){
     personne* p1 = genererPersonne();
+    affichagePersonne(p1);
     std::string nom = genererNomPrenom("Noms_TP4.txt", 1000);
     std::string prenom = genererNomPrenom("Prenoms_TP4.txt", 11612);
     std::string tel = genererTel();
