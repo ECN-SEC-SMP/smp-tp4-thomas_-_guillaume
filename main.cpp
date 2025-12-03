@@ -10,6 +10,7 @@
 #include "utilitaire_generation.h"
 #include "type_def.h"
 #include "utilitaires.h"
+#include "repertoire.h"
 
 int main()
 {
@@ -40,5 +41,7 @@ int main()
     {
         cout << "Les deux personnes sont différentes." << endl;
     }
+
+    ajouter(p1, elem);
     return 0;
 }
