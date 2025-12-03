@@ -10,7 +10,7 @@ typedef struct
 
 typedef struct elementListe
 {
-  personne personne;
+  personne p;
   struct elementListe *suivant;   // pointeur vers l'élément suivant
   struct elementListe *precedent; // pointeur vers l'élément précédent
 } elementListe;
