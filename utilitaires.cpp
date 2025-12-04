@@ -19,11 +19,11 @@ elementListe *creerElementListe(const personne &p)
   return nouv;
 }
 
-void affichagePersonne(personne *p)
+void affichagePersonne(personne &p)
 {
-  std::cout << p->nom << endl;
-  std::cout << p->prenom << endl;
-  std::cout << p->telephone << endl;
+  std::cout << p.nom << endl;
+  std::cout << p.prenom << endl;
+  std::cout << p.telephone << endl;
 }
 
 bool egalitePersonne(const personne &p1, const personne &p2)
@@ -31,30 +31,19 @@ bool egalitePersonne(const personne &p1, const personne &p2)
   return (p1.nom == p2.nom) && (p1.prenom == p2.prenom) && (p1.telephone == p2.telephone);
 }
 
-bool comparerPersonne(personne *p1, personne *p2)
+bool comparerPersonne(personne &p1, personne &p2)
 {
-  if (p1->nom < p2->nom)
+  if (p1.nom < p2.nom)
   {
     return true;
   }
-  else
-  {
-    return false;
-  }
-  if (p1->prenom < p2->prenom)
+  if (p1.prenom < p2.prenom)
   {
     return true;
   }
-  else
-  {
-    return false;
-  }
-  if (p1->telephone < p2->telephone)
+  if (p1.telephone < p2.telephone)
   {
     return true;
   }
-  else
-  {
-    return false;
-  }
+  return false;
 }
