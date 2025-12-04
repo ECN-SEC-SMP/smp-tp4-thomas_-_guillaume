@@ -1,19 +1,20 @@
 #include "repertoire.h"
+#include "utilitaires.h"
 
 int rechercher(elementListe *liste, const personne &p)
 {
-  elementListe *actuel = liste;
-  int index = 0;
+    elementListe *actuel = liste;
+    int index = 0;
 
-  while (actuel != nullptr)
-  {
-    if (actuel->p.nom == p.nom && actuel->p.prenom == p.prenom && actuel->p.telephone == p.telephone)
+    while (actuel != nullptr)
     {
-      return index; // personne trouvée retourner l'indice
+        if (egalitePersonne(actuel->p, p))
+        {
+            return index; // personne trouvée retourner l'indice
+        }
+        actuel = actuel->suivant;
+        index++;
     }
-    actuel = actuel->suivant;
-    index++;
-  }
 
-  return -1; // personne non trouvée
+    return -1; // personne non trouvée
 }
