@@ -3,3 +3,4 @@
 #include "utilitaires.h"
 
 elementListe* ajouter(personne &p1, elementListe* listeElement);
+void afficherElementListe(elementListe *liste);

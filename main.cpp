@@ -45,5 +45,6 @@ int main()
     ajouter(*p1, elem);
     ajouter(*p2, elem);
     ajouter(*p3, elem);
+    afficherElementListe(elem);
     return 0;
 }
