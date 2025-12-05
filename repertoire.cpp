@@ -11,7 +11,7 @@ elementListe *ajouter(personne &p1, elementListe *listeElement)
             return teteListe;
         }
         // Si p1 est devant actuel->p
-        if (!comparerPersonne(p1, actuel->p))
+        if (comparerPersonne(p1, actuel->p))
         {
             elementListe *newElement = new elementListe;
             newElement->p = p1;
@@ -21,7 +21,7 @@ elementListe *ajouter(personne &p1, elementListe *listeElement)
             {
                 actuel->precedent->suivant = newElement; // oui
             }
-            actuel->suivant = newElement; // ligne de fdp
+            actuel->precedent = newElement;
             return teteListe;
         }
         else if (actuel->suivant == nullptr)
@@ -32,8 +32,9 @@ elementListe *ajouter(personne &p1, elementListe *listeElement)
             newElement->precedent = actuel;
             if (actuel->precedent != nullptr)
             {
-                actuel->suivant = newElement;
+                actuel->precedent->suivant = newElement; // oui
             }
+            actuel->suivant = newElement;
             return teteListe;
         }
         actuel = actuel->suivant;
