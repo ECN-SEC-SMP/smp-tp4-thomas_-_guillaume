@@ -1,8 +1,4 @@
-#include "utilitaire_generation.h"
 #include "utilitaires.h"
-
-#include <iostream>
-#include <ostream>
 
 personne *genererPersonne()
 {

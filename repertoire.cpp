@@ -1,5 +1,4 @@
 #include "repertoire.h"
-#include "utilitaires.h"
 
 int rechercher(elementListe *liste, const personne &p)
 {
@@ -60,6 +59,7 @@ elementListe *supprimer(elementListe *liste, const personne &p)
         {
             prec = actual;
         }
+        actual = actual->suivant;
     }
     return liste;
 }

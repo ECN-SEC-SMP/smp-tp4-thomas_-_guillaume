@@ -41,7 +41,6 @@ int main()
     {
         cout << "Les deux personnes sont différentes." << endl;
     }
-    return 0;
 
     // test rechercher
     elementListe *liste = nullptr;
@@ -56,5 +55,6 @@ int main()
     // test supprimer
     liste = supprimer(liste, *p1);
     index = rechercher(liste, *p1);
-    cout << "Index de la personne supprimée : " << index << endl;
+    cout << "Index de la personne supprimée : " << index << endl; // toujours -1 normalement
+    return 0;
 }
