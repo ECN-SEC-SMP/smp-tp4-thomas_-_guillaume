@@ -16,5 +16,6 @@ utilitaires.o : utilitaires.cpp  utilitaires.h type_def.h utilitaire_generation.
 repertoire.o : repertoire.cpp repertoire.h utilitaires.h type_def.h 
 	g++ -c $(CXXFLAGS) repertoire.cpp
 
+
 clean :
 	rm -f $(EXEC) *.o
