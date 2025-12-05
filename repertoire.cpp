@@ -21,7 +21,7 @@ elementListe* ajouter(personne &p1, elementListe* listeElement){
             actuel->suivant = newElement;
             return teteListe;
         }
-        if (actuel->suivant == nullptr)
+        else if (actuel->suivant == nullptr)
         {
             elementListe* newElement = new elementListe;
             newElement->p = p1;
