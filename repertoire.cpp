@@ -19,7 +19,7 @@ int rechercher(elementListe *liste, const personne &p)
     return -1; // personne non trouvée
 }
 
-// version récursive de la fonction rechercher
+// version récursive de la fonction rechercher (obligé d'ajouter un paramètre index)
 int rechercherRec(elementListe *liste, const personne &p, int index)
 {
     if (liste == nullptr) // fin de la liste
