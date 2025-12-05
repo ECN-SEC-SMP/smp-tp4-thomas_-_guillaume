@@ -32,3 +32,34 @@ int rechercherRec(elementListe *liste, const personne &p, int index)
     }
     return rechercherRec(liste->suivant, p, index + 1); // appel récursif avec l'élément suivant et l'indice incrémenté
 }
+
+elementListe *supprimer(elementListe *liste, const personne &p)
+{
+    elementListe *actual = liste;
+    elementListe *prec = liste->precedent;
+
+    while (actual != nullptr)
+    {
+        // app
+        if (egalitePersonne(actual->p, p))
+        {
+            if (prec != nullptr)
+            {
+                // changement du pointeur precedent qui pointe sur le nouveau suivant
+                prec->suivant = actual->suivant;
+            }
+            if (actual->suivant != nullptr)
+            {
+                // changement du pointeur suivant qui pointe sur le nouveau precedent
+                actual->suivant->precedent = prec;
+            }
+            delete actual;
+            // delete pointeur
+        }
+        else
+        {
+            prec = actual;
+        }
+    }
+    return liste;
+}
