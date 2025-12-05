@@ -18,3 +18,17 @@ int rechercher(elementListe *liste, const personne &p)
 
     return -1; // personne non trouvée
 }
+
+// version récursive de la fonction rechercher
+int rechercherRec(elementListe *liste, const personne &p, int index)
+{
+    if (liste == nullptr) // fin de la liste
+    {
+        return -1; // personne non trouvée
+    }
+    if (egalitePersonne(liste->p, p)) // personne trouvée
+    {
+        return index; // retourner l'indice
+    }
+    return rechercherRec(liste->suivant, p, index + 1); // appel récursif avec l'élément suivant et l'indice incrémenté
+}
