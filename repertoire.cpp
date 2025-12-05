@@ -1,14 +1,15 @@
 #include "repertoire.h"
 
 elementListe* ajouter(personne &p1, elementListe* listeElement){
+    elementListe *teteListe = listeElement;
     elementListe *actuel = listeElement;
     while (actuel != nullptr) {
         if (egalitePersonne(p1, actuel->p))
         {
-            return listeElement;
+            return teteListe;
         }
         // Si p1 est devant actuel->p
-        if (!comparerPersonne(p1,actuel->p)) {
+        if(!comparerPersonne(p1,actuel->p)){
             elementListe* newElement = new elementListe;
             newElement->p = p1;
             newElement->suivant = actuel;
@@ -18,6 +19,7 @@ elementListe* ajouter(personne &p1, elementListe* listeElement){
                 actuel->precedent->suivant = newElement;
             }
             actuel->suivant = newElement;
+            return teteListe;
         }
         if (actuel->suivant == nullptr)
         {
@@ -29,8 +31,9 @@ elementListe* ajouter(personne &p1, elementListe* listeElement){
             {
                 actuel->suivant = newElement;
             }
+            return teteListe;
         }
         actuel = actuel->suivant;
     }
-    return actuel;
+    return teteListe;
 }
