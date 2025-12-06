@@ -45,6 +45,7 @@ elementListe *ajouter(personne &p1, elementListe *listeElement)
     return teteListe;
 }
 
+// Fonction pour afficher les personnes dans un liste élément
 void afficherElementListe(elementListe *listeElement)
 {
     elementListe *actuel = listeElement;
@@ -55,6 +56,7 @@ void afficherElementListe(elementListe *listeElement)
     }
 }
 
+// Fonction renvoyant l'index d'une personne dans une liste
 int rechercher(elementListe *liste, const personne &p)
 {
     elementListe *actuel = liste;
@@ -73,7 +75,7 @@ int rechercher(elementListe *liste, const personne &p)
     return -1; // personne non trouvée
 }
 
-// version récursive de la fonction rechercher (obligé d'ajouter un paramètre index)
+// Version récursive de la fonction rechercher (obligé d'ajouter un paramètre index)
 int rechercherRec(elementListe *liste, const personne &p, int index)
 {
     if (liste == nullptr) // fin de la liste
@@ -87,6 +89,7 @@ int rechercherRec(elementListe *liste, const personne &p, int index)
     return rechercherRec(liste->suivant, p, index + 1); // appel récursif avec l'élément suivant et l'indice incrémenté
 }
 
+// Fonction pour supprimer une personne d'une liste
 elementListe *supprimer(elementListe *liste, const personne &p)
 {
     elementListe *actual = liste;
