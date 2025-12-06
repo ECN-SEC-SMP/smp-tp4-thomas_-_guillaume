@@ -46,15 +46,15 @@ Objectif : Réaliser un algorithme permettant de manipuler els structures de don
 - **Spécification** : Permet d'ajouter une personne au bon endroit dans une liste élément à l'aide de la fonction comparaison.
 - **Principe** : Renvoie la tête de la liste élément. Ajoute la personne dans la liste si elle n'était pas présente au paravant.
 
-## G. `void afficherElementListe(elementListe *listeElement)`
+### G. `void afficherElementListe(elementListe *listeElement)`
 - **Spécification** : Permet d'afficher les informations de toutes les personnes dans une liste d'élément.
 - **Principe** : Affiche les informations des personnes d'une liste en parcourant celle-ci.
 
-## H. `int rechercher(elementListe *liste, cons personne &p)`
+### H. `int rechercher(elementListe *liste, cons personne &p)`
 - **Spécification** : Renvoie l'index de la personne dans un élément liste.
 - **Principe** : Renvoie l'indice de la personne trouvée et si elle ne l'est pas, la fonction renvoie -1.
 
-## I. `elementListe *supprimer(elementListe *liste, const personne &p)`
+### I. `elementListe *supprimer(elementListe *liste, const personne &p)`
 - **Spécification** : Supprime une personne dans la structure de données d'un élément liste.
 - **Principe** : La fonction supprime la personne de la liste et renvoie le pointeur vers la tête de la nouvelle liste.
 ---
