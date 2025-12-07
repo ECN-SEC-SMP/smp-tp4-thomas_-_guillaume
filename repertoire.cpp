@@ -3,6 +3,16 @@
 // Fonction pour ajouter une personne dans une liste
 elementListe *ajouter(personne &p1, elementListe *listeElement)
 {
+    // *** CAS LISTE VIDE ***
+    if (listeElement == nullptr)
+    {
+        elementListe *newElement = new elementListe;
+        newElement->p = p1;
+        newElement->suivant = nullptr;
+        newElement->precedent = nullptr;
+        return newElement; // nouvelle tête de liste
+    }
+
     // On garde la tête de liste pour retourner la
     elementListe *teteListe = listeElement;
     elementListe *actuel = listeElement;
